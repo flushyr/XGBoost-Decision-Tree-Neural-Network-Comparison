@@ -40,18 +40,6 @@ Initially, a decision tree model was run to assess feature importance, focusing 
 All models in the comparative analysis were trained on the same dataset, ensuring a fair evaluation of their performance. To mitigate overfitting risks, five-fold cross-validation was employed for all models. Hyperparameter tuning was conducted using Grid Search for XGBoost and Decision Trees due to their limited hyperparameters, while a random search was employed for the Neural Network's extensive parameter space. To address variability in optimal hyperparameters, training, tuning, and evaluation were repeated ten times, with the final hyperparameter chosen by majority vote.
 
 
-#### XGBoost Model
-The XGBoost model was optimized by tuning essential hyperparameters like learning rate, maximum delta step, subsample ratio, and number of parallel trees, which significantly improved its performance and mitigated overfitting risks for binary classification tasks.
-
-
-#### Decision Tree Model
-The Decision Tree model's performance was enhanced by adjusting critical parameters such as split criterion, maximum tree depth, and minimum sample requirements, leading to improved accuracy, reduced overfitting, and better generalization capabilities.
-
-
-#### Neural Network Model
-The Neural Network model's effectiveness was boosted through tuning hidden layer sizes, activation function, optimiser, learning rate schedule, and early stopping settings, resulting in improved capacity to capture complex patterns, generalize effectively, and adapt to unseen data.  
-
-
 ## Comparison and Discussion
 I compared the performance of XGBoost, Decision Tree, and Neural Network models using accuracy, precision, recall, F1 score, and area under the ROC curve (AUC). XGBoost generally outperforms the other models across these metrics, with statistically significant differences in most cases, although it performs similarly to the Neural Network in terms of recall. All in all, while XGBoost was better than Neural Networks overall, the similar scores suggests that model performance may be limited by the dataset's predictive power and the similarity of characteristics between the two fly species. Below is a graph and table comparing the three models with statistically insignificant p-values marked by a star:
 
@@ -72,7 +60,7 @@ I compared the performance of XGBoost, Decision Tree, and Neural Network models 
 
 
 ## Conclusion, Evaluation, and Improvements
-The glaring issue with this comparison is that it only used one dataset, so the scope of this experiment can be expanded to new datasets. Additionally, expanding the search range for hyperparameters and exploring advanced optimization methods like Bayesian optimization could enhance the models' performance. Increasing the number of trials during training can reduce performance variations. Addressing the dataset's limitations may involve adding new attributes or considering a more complex dataset. Broadening the consideration of hyperparameters could have improved overall fairness and performance. Overall, my study reinforces that XGBoost is superior to Decision Trees and Neural Networks for this specific case of tabular data analysis.
+The glaring issue with this comparison is that it only used one dataset, limiting the scope of the experiment. To address this, the study can be expanded to include new datasets, which would provide a more comprehensive evaluation. Additionally, expanding the search range for hyperparameters and exploring advanced optimization methods like Bayesian optimization could enhance the models' performance. Increasing the number of trials during training can reduce performance variations, leading to more robust results.
 
 
 ## Thank you
@@ -84,8 +72,10 @@ Thank you very much for reading. My full report is availiable upon request; feel
 - Donges, N. (2020, January 09). 4 disadvantages of neural networks. Built in.
 - Friedman, J. H. (2001). Greedy function approximation: A gradient boosting machine. The Annals of Statistics, 29(5), 1189-1232.
 - Grinsztajn, L., Oyallon, E., & Varoquaux, G. (2022). Why do tree-based models still outperform deep learning on typical tabular data?. Advances in neural information processing systems, 35, 507-520.
+- Hoffmann, Ary A.; Smith, Ailie; Griffin, Philippa C.; Hangartner, Sandra B. (2016). Data from: A collection of Australian Drosophila datasets on climate adaptation and species distributions [Dataset]. Dryad. https://doi.org/10.5061/dryad.k9c31
 - Pardoe, I. (2020, March 14). 10.10 - Other Regression Pitfalls. The Pennysylvania State University.
 - Sarker, I. H. (2021). Deep learning: A comprehensive overview on techniques, taxonomy, applications and research directions. SN Computer Science, 2(6), 420.
 - Wohlwend, B. (2023). Decision Tree, Random Forest, and XGBoost: an exploration into the heart of Machine Learning. Medium.
 - XGBoost Developers. (2022). XGBoost 2.0.3 documentation. Read the Docs.
 - Zhang, P., Jia, Y., & Shang, Y. (2022). Research and application of XGBoost in imbalanced data. International Journal of Distributed Sensor Networks, 18(6), 155013292211069.
+  
