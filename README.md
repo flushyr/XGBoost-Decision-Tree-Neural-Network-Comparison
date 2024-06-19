@@ -5,7 +5,7 @@ My report for COMP4702: Machine Learning, A comparison between XGBoost, Decision
 ### Background
 I found machine learning to be such an interesting course, so I've decided I'd like to focus my career around it. I am extremely proud of this assignment since I put a lot of thought into coding, tuning, training, then repeating again. I even mixed in some statistical analysis in the form of p-scores in the final comparison.
 
-We were given a tabular dataset from a scientific research article discussing the evolutionary biology of the fruit fly, Drosophila melanogaster. This dataset includes measurements of thorax length (millimetres), wing to thorax ratio (wing loading), and various wing dimensions (l2, l3p, lpd, l3, w1, w2, w3) from five laboratory populations of Drosophila buzzatii and Drosophila aldrichi. The data was collected in 1994 after these populations were maintained in the laboratory for five generations at a constant temperature of 25°C. Measurements were taken of the fifth generation’s offspring, raised under three different temperature treatments (20°C, 25°C, and 30°C).
+We were given a tabular dataset from a scientific research article discussing the evolutionary biology of the fruit fly, Drosophila melanogaster. This dataset includes measurements of thorax length, wing to thorax ratio, and various wing dimensions from five laboratory populations.
 
 I decided to set the aim of the model to predict whether each fly is classified as Drosophila aldrichi or Drosophila buzzatii.
 
