@@ -22,7 +22,6 @@ Initially, a decision tree model was run to assess feature importance, focusing 
     <source media="(prefers-color-scheme: light)" srcset="https://github.com/flushyr/XGBoost-Decision-Tree-Neural-Network-Comparison/blob/main/Figures/Features'%20Correlation%20Matrix.png">
     <img alt="Correlation Matrix" src="https://github.com/flushyr/XGBoost-Decision-Tree-Neural-Network-Comparison/blob/main/Figures/Features'%20Correlation%20Matrix.png" width="600">
   </picture>
-  <figcaption style="text-align:center;">Correlation Matrix</figcaption>
 </figure>
 
 <figure style="text-align: center;">
@@ -31,7 +30,6 @@ Initially, a decision tree model was run to assess feature importance, focusing 
     <source media="(prefers-color-scheme: light)" srcset="https://github.com/flushyr/XGBoost-Decision-Tree-Neural-Network-Comparison/blob/main/Figures/Features'%20Decision%20Tree%20Importance.png">
     <img alt="Decision Tree Importance" src="https://github.com/flushyr/XGBoost-Decision-Tree-Neural-Network-Comparison/blob/main/Figures/Features'%20Decision%20Tree%20Importance.png" width="600">
   </picture>
-  <figcaption style="text-align:center;">Decision Tree Importance</figcaption>
 </figure>
 
 ## Model Training
@@ -48,5 +46,20 @@ The Neural Network model's effectiveness was boosted through tuning hidden layer
 
 
 ## Comparison and Discussion
-I compared the performance of XGBoost, Decision Tree, and Neural Network models using accuracy, precision, recall, F1 score, and area under the ROC curve (AUC). XGBoost generally outperforms the other models across these metrics, with statistically significant differences in most cases, although it performs similarly to the Neural Network in terms of recall. All in all, while XGBoost was better than Neural Networks overall, the similar scores suggests that model performance may be limited by the dataset's predictive power and the similarity of characteristics between the two fly species. Below is a table showing 
+I compared the performance of XGBoost, Decision Tree, and Neural Network models using accuracy, precision, recall, F1 score, and area under the ROC curve (AUC). XGBoost generally outperforms the other models across these metrics, with statistically significant differences in most cases, although it performs similarly to the Neural Network in terms of recall. All in all, while XGBoost was better than Neural Networks overall, the similar scores suggests that model performance may be limited by the dataset's predictive power and the similarity of characteristics between the two fly species. Below is a graph comparing the three:
+
+<picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/flushyr/XGBoost-Decision-Tree-Neural-Network-Comparison/blob/main/Figures/Metrics%20Comparison%20-%20Dark.png">
+    <source media="(prefers-color-scheme: light)" srcset="https://github.com/flushyr/XGBoost-Decision-Tree-Neural-Network-Comparison/blob/main/Figures/Metrics%20Comparison.png">
+  <img src="https://github.com/flushyr/XGBoost-Decision-Tree-Neural-Network-Comparison/blob/main/Figures/Metrics%20Comparison.png" alt="Metrics Comparison">
+</picture>
+
+| Metric   | XGBoost ± Std | p value (XGBoost vs Neural Network) | Neural Network ± Std | p value (Neural Network vs Decision Tree) | Decision Tree ± Std |
+|----------|---------------|--------------------------------------|----------------------|--------------------------------------------|---------------------|
+| AUC      | 0.7269 ± 0.0167 | 2.0056 e-18                           | 0.6866 ± 0.0322     | 1.7721 e-58</mark>                                | 0.6253 ± 0.0246    |
+| Accuracy | 0.6704 ± 0.0184 | 2.3144 e-17                           | 0.6335 ± 0.0295     | <mark>8.9549 e-04</mark>                                | 0.6207 ± 0.0233    |
+| Precision| 0.6838 ± 0.0184 | 5.4295 e-21</mark>                           | 0.6409 ± 0.0301     | 9.8783 e-01                                | 0.6408 ± 0.0232    |
+| Recall   | 0.6928 ± 0.0229 | <mark>7.8911 e-01</mark>                           | 0.6915 ± 0.0469     | 1.6851 e-16                                | 0.6320 ± 0.0326    |
+| F1       | 0.6881 ± 0.0179 | 3.2152 e-10                           | 0.6641 ± 0.0280     | 1.2007 e-11                                | 0.6361 ± 0.0242    |
+
 
